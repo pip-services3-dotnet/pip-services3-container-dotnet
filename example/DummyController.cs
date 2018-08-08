@@ -31,7 +31,7 @@ namespace PipServices.Container
             _logger.SetReferences(references);
         }
 
-        public bool IsOpened()
+        public bool IsOpen()
         {
             return _timer.IsStarted;
         }

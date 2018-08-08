@@ -55,7 +55,7 @@ namespace PipServices.Container
             references.Put(DefaultContainerFactory.Descriptor, _factories);
         }
 
-        public virtual bool IsOpened()
+        public virtual bool IsOpen()
         {
             return _references != null;
         }

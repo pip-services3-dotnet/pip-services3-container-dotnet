@@ -22,9 +22,9 @@ namespace PipServices.Container.Refer
             BaseReferences = _runner;
         }
 
-        public bool IsOpened()
+        public bool IsOpen()
         {
-            return _linker.IsOpened() && _runner.IsOpened();
+            return _linker.IsOpen() && _runner.IsOpen();
         }
 
         public async Task OpenAsync(string correlationId)

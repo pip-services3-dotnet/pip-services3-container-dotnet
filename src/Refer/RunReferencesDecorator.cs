@@ -13,7 +13,7 @@ namespace PipServices.Container.Refer
             : base(baseReferences, parentReferences)
         { }
 
-        public bool IsOpened()
+        public bool IsOpen()
         {
             return _opened;    
         }

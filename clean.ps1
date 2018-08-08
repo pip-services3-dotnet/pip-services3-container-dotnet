@@ -5,8 +5,26 @@ $buildImage="$($component.registry)/$($component.name):$($component.version)-bui
 $testImage="$($component.registry)/$($component.name):$($component.version)-test"
 
 # Clean up build directories
+if (Test-Path "obj") {
+    Remove-Item -Recurse -Force -Path "obj"
+}
 if (Test-Path "dist") {
     Remove-Item -Recurse -Force -Path "dist"
+}
+if (Test-Path "src/bin") {
+    Remove-Item -Recurse -Force -Path "src/bin"
+}
+if (Test-Path "src/obj") {
+    Remove-Item -Recurse -Force -Path "src/obj"
+}
+if (Test-Path "test/bin") {
+    Remove-Item -Recurse -Force -Path "test/bin"
+}
+if (Test-Path "test/obj") {
+    Remove-Item -Recurse -Force -Path "test/obj"
+}
+if (Test-Path "*.nupkg") {
+    Remove-Item -Force -Path "*.nupkg"
 }
 
 # Remove docker images
