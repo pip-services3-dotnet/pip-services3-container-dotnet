@@ -4,6 +4,7 @@ using PipServices.Commons.Config;
 using PipServices.Commons.Errors;
 using PipServices.Commons.Refer;
 using PipServices.Commons.Run;
+using PipServices.Components.Build;
 using PipServices.Components.Info;
 using PipServices.Components.Log;
 using PipServices.Container.Build;
@@ -53,6 +54,11 @@ namespace PipServices.Container
             else _info = existingInfo;
 
             references.Put(DefaultContainerFactory.Descriptor, _factories);
+        }
+
+        public void AddFactory(IFactory factory)
+        {
+            _factories.Add(factory);
         }
 
         public virtual bool IsOpen()

@@ -55,7 +55,7 @@ namespace PipServices.Container.Config
             }
             catch (ConfigException e)
             {
-                Assert.Equal(e.Message, "Component configuration must have descriptor or type");
+                Assert.Equal("Component configuration must have descriptor or type", e.Message);
             }
 
             config = ConfigParams.FromTuples(
@@ -71,7 +71,7 @@ namespace PipServices.Container.Config
             }
             catch (ConfigException e)
             {
-                Assert.Equal(e.Message, "Descriptor descriptor_name is in wrong format");
+                Assert.Equal("Descriptor descriptor_name is in wrong format", e.Message);
             }
 
             var descriptor = new Descriptor("group", "type", "id", "name", "version");
