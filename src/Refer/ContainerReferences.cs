@@ -7,8 +7,16 @@ using PipServices.Container.Config;
 
 namespace PipServices.Container.Refer
 {
+    /// <summary>
+    /// Container managed references that can be created from container configuration.
+    /// </summary>
+    /// See <see cref="ManagedReferences"/>
     public sealed class ContainerReferences : ManagedReferences
     {
+        /// <summary>
+        /// Puts components into the references from container configuration.
+        /// </summary>
+        /// <param name="config">a container configuration with information of components to be added.</param>
         public void PutFromConfig(ContainerConfig config)
         {
             foreach (var componentConfig in config)

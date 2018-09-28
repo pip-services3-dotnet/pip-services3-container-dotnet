@@ -5,10 +5,25 @@ using PipServices.Commons.Reflect;
 
 namespace PipServices.Container.Config
 {
+    /// <summary>
+    /// Configuration of a component inside a container.
+    /// 
+    /// The configuration includes type information or descriptor,
+    /// and component configuration parameters.
+    /// </summary>
     public sealed class ComponentConfig
     {
+        /// <summary>
+        /// Creates a new instance of the component configuration.
+        /// </summary>
         public ComponentConfig() { }
 
+        /// <summary>
+        /// Creates a new instance of the component configuration.
+        /// </summary>
+        /// <param name="descriptor">(optional) a components descriptor (locator).</param>
+        /// <param name="type">(optional) a components type descriptor.</param>
+        /// <param name="config">(optional) component configuration parameters.</param>
         public ComponentConfig(Descriptor descriptor, TypeDescriptor type, ConfigParams config)
         {
             Descriptor = descriptor;
@@ -20,6 +35,11 @@ namespace PipServices.Container.Config
         public TypeDescriptor Type { get; set; }
         public ConfigParams Config { get; set; }
 
+        /// <summary>
+        /// Creates a new instance of ComponentConfig based on section from container configuration.
+        /// </summary>
+        /// <param name="config">config component parameters from container configuration</param>
+        /// <returns>a newly created ComponentConfig</returns>
         public static ComponentConfig FromConfig(ConfigParams config)
         {
             var descriptor = Descriptor.FromString(config.GetAsNullableString("descriptor"));

@@ -6,11 +6,34 @@ using PipServices.Commons.Config;
 
 namespace PipServices.Container
 {
+    /// <summary>
+    /// Inversion of control (IoC) container that runs as a system process.
+    /// It processes command line arguments and handles unhandled exceptions and Ctrl-C signal
+    /// to gracefully shutdown the container.
+    /// 
+    /// ### Command line arguments ###
+    /// - <code>--config / -c</code> path to JSON or YAML file with container configuration (default: "./config/config.yml")
+    /// - <code>--param / --params / -p</code> value(s) to parameterize the container configuration 
+    /// - <code>--help / -h</code> prints the container usage help
+    /// </summary>
+    /// <example>
+    /// <code>
+    /// var container = new ProcessContainer();
+    /// container.AddFactory(new MyComponentFactory());
+    /// 
+    /// container.RunAsync(process.getArgs());
+    /// </code>
+    /// </example>
     public class ProcessContainer : Container
     {
         protected string _configPath = "../config/config.yml";
         private readonly ManualResetEvent _exitEvent = new ManualResetEvent(false);
 
+        /// <summary>
+        /// Creates a new instance of the container.
+        /// </summary>
+        /// <param name="name">(optional) a container name (accessible via ContextInfo)</param>
+        /// <param name="description">(optional) a container description (accessible via ContextInfo)</param>
         public ProcessContainer(string name = null, string description = null)
             : base(name, description)
         {
@@ -112,6 +135,14 @@ namespace PipServices.Container
             _exitEvent.WaitOne();
         }
 
+        /// <summary>
+        /// Runs the container by instantiating and running components inside the container.
+        /// 
+        /// It reads the container configuration, creates, configures, references and
+        /// opens components.On process exit it closes, unreferences and destroys
+        /// components to gracefully shutdown.
+        /// </summary>
+        /// <param name="args">command line arguments</param>
         public async Task RunAsync(string[] args)
         {
             if (ShowHelp(args))

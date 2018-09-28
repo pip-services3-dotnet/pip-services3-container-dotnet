@@ -4,6 +4,16 @@ using System.Threading.Tasks;
 
 namespace PipServices.Container.Refer
 {
+    /// <summary>
+    /// Managed references that in addition to keeping and locating references can also
+    /// manage their lifecycle:
+    /// - Auto-creation of missing component using available factories
+    /// - Auto-linking newly added components
+    /// - Auto-opening newly added components
+    /// - Auto-closing removed components
+    /// </summary>
+    /// See <see cref="RunReferencesDecorator"/>, <see cref="LinkReferencesDecorator"/>, 
+    /// <see cref="BuildReferencesDecorator"/>, <see cref="References"/>
     public class ManagedReferences: ReferencesDecorator, IOpenable
     {
         protected References _references;
@@ -11,6 +21,11 @@ namespace PipServices.Container.Refer
         protected LinkReferencesDecorator _linker;
         protected RunReferencesDecorator _runner;
 
+        /// <summary>
+        /// Creates a new instance of the references
+        /// </summary>
+        /// <param name="tuples">tuples where odd values are component locators (descriptors)
+        /// and even values are component references</param>
         public ManagedReferences(object[] tuples = null)
             : base(null, null)
         {
@@ -22,11 +37,19 @@ namespace PipServices.Container.Refer
             BaseReferences = _runner;
         }
 
+        /// <summary>
+        /// Checks if the component is opened.
+        /// </summary>
+        /// <returns>true if the component has been opened and false otherwise.</returns>
         public bool IsOpen()
         {
             return _linker.IsOpen() && _runner.IsOpen();
         }
 
+        /// <summary>
+        /// Opens the component.
+        /// </summary>
+        /// <param name="correlationId">(optional) transaction id to trace execution through call chain.</param>
         public async Task OpenAsync(string correlationId)
         {
             await _linker.OpenAsync(correlationId);
@@ -34,16 +57,22 @@ namespace PipServices.Container.Refer
         }
 
         /// <summary>
-        /// close all references as an asynchronous operation.
+        /// Closes component and frees used resources.
         /// </summary>
-        /// <param name="correlationId">a unique transaction id to trace calls across components</param>
-        /// <returns>Task.</returns>
+        /// <param name="correlationId">(optional) transaction id to trace execution through call chain.</param>
         public async Task CloseAsync(string correlationId)
         {
             await _runner.CloseAsync(correlationId);
             await _linker.CloseAsync(correlationId);
         }
 
+        /// <summary>
+        /// Creates a new ManagedReferences object filled with provided key-value pairs
+        /// called tuples.Tuples parameters contain a sequence of locator1, component1,
+        /// locator2, component2, ... pairs.
+        /// </summary>
+        /// <param name="tuples">the tuples to fill a new ManagedReferences object.</param>
+        /// <returns>a new ManagedReferences object.</returns>
         public static ManagedReferences FromTyples(params object[] tuples)
         {
             return new ManagedReferences(tuples);
