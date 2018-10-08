@@ -7,8 +7,8 @@ namespace PipServices.Container.Refer
 {
     /// <summary>
     /// References decorator that automatically sets references to newly added components
-    /// that implement IReferenceable interface and unsets references from removed components
-    /// that implement IUnreferenceable interface.
+    /// that implement <a href="https://rawgit.com/pip-services-dotnet/pip-services-commons-dotnet/master/doc/api/interface_pip_services_1_1_commons_1_1_refer_1_1_i_referenceable.html">IReferenceable</a> interface and unsets references from removed components
+    /// that implement <a href="https://rawgit.com/pip-services-dotnet/pip-services-commons-dotnet/master/doc/api/interface_pip_services_1_1_commons_1_1_refer_1_1_i_unreferenceable.html">IUnreferenceable</a> interface.
     /// </summary>
     public class LinkReferencesDecorator : ReferencesDecorator, IOpenable
     {

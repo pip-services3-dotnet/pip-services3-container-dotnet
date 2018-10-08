@@ -7,8 +7,8 @@ namespace PipServices.Container.Refer
 {
     /// <summary>
     /// References decorator that automatically opens to newly added components
-    /// that implement IOpenable interface and closes removed components
-    /// that implement IClosable interface.
+    /// that implement <a href="https://rawgit.com/pip-services-dotnet/pip-services-commons-dotnet/master/doc/api/interface_pip_services_1_1_commons_1_1_run_1_1_i_openable.html">IOpenable</a> interface and closes removed components
+    /// that implement <a href="https://rawgit.com/pip-services-dotnet/pip-services-commons-dotnet/master/doc/api/interface_pip_services_1_1_commons_1_1_run_1_1_i_closable.html">IClosable</a> interface.
     /// </summary>
     public class RunReferencesDecorator : ReferencesDecorator, IOpenable
     {
