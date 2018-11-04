@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.14"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Pip-Services-Container-Dotnet: PipServices.Container.Container Class Reference</title>
+<title>Pip-Services-Container-Dotnet: PipServices3.Container.Container Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -71,7 +71,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="namespace_pip_services.html">PipServices</a></li><li class="navelem"><a class="el" href="namespace_pip_services_1_1_container.html">Container</a></li><li class="navelem"><a class="el" href="class_pip_services_1_1_container_1_1_container.html">Container</a></li>  </ul>
+<li class="navelem"><a class="el" href="namespace_pip_services.html">PipServices3</a></li><li class="navelem"><a class="el" href="namespace_pip_services_1_1_container.html">Container</a></li><li class="navelem"><a class="el" href="class_pip_services_1_1_container_1_1_container.html">Container</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -81,19 +81,19 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="class_pip_services_1_1_container_1_1_container-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">PipServices.Container.Container Class Reference</div>  </div>
+<div class="title">PipServices3.Container.Container Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p>Inversion of control (IoC) container that creates components and manages their lifecycle.  
  <a href="class_pip_services_1_1_container_1_1_container.html#details">More...</a></p>
 <div class="dynheader">
-Inheritance diagram for PipServices.Container.Container:</div>
+Inheritance diagram for PipServices3.Container.Container:</div>
 <div class="dyncontent">
  <div class="center">
-  <img src="class_pip_services_1_1_container_1_1_container.png" usemap="#PipServices.Container.Container_map" alt=""/>
-  <map id="PipServices.Container.Container_map" name="PipServices.Container.Container_map">
-<area href="class_pip_services_1_1_container_1_1_process_container.html" title="Inversion of control (IoC) container that runs as a system process. It processes command line argumen..." alt="PipServices.Container.ProcessContainer" shape="rect" coords="381,112,625,136"/>
+  <img src="class_pip_services_1_1_container_1_1_container.png" usemap="#PipServices3.Container.Container_map" alt=""/>
+  <map id="PipServices3.Container.Container_map" name="PipServices3.Container.Container_map">
+<area href="class_pip_services_1_1_container_1_1_process_container.html" title="Inversion of control (IoC) container that runs as a system process. It processes command line argumen..." alt="PipServices3.Container.ProcessContainer" shape="rect" coords="381,112,625,136"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -156,17 +156,17 @@ ContextInfo&#160;</td><td class="memItemRight" valign="bottom"><b>_info</b></td>
 <p>The container is driven by configuration, that usually stored in JSON or YAML file. The configuration contains a list of components identified by type or locator, followed by component configuration.</p>
 <p>On container start it performs the following actions:</p><ul>
 <li>Creates components using their types or calls registered factories to create components using their locators</li>
-<li>Configures components that implement <a href="https://rawgit.com/pip-services-dotnet/pip-services-commons-dotnet/master/doc/api/interface_pip_services_1_1_commons_1_1_config_1_1_i_configurable.html">IConfigurable</a> interface and passes them their configuration parameters</li>
-<li>Sets references to components that implement <a href="https://rawgit.com/pip-services-dotnet/pip-services-commons-dotnet/master/doc/api/interface_pip_services_1_1_commons_1_1_refer_1_1_i_referenceable.html">IReferenceable</a> interface and passes them references of all components in the container</li>
-<li>Opens components that implement <a href="https://rawgit.com/pip-services-dotnet/pip-services-commons-dotnet/master/doc/api/interface_pip_services_1_1_commons_1_1_run_1_1_i_openable.html">IOpenable</a> interface</li>
+<li>Configures components that implement <a href="https://rawgit.com/pip-services3-dotnet/pip-services3-commons-dotnet/master/doc/api/interface_pip_services_1_1_commons_1_1_config_1_1_i_configurable.html">IConfigurable</a> interface and passes them their configuration parameters</li>
+<li>Sets references to components that implement <a href="https://rawgit.com/pip-services3-dotnet/pip-services3-commons-dotnet/master/doc/api/interface_pip_services_1_1_commons_1_1_refer_1_1_i_referenceable.html">IReferenceable</a> interface and passes them references of all components in the container</li>
+<li>Opens components that implement <a href="https://rawgit.com/pip-services3-dotnet/pip-services3-commons-dotnet/master/doc/api/interface_pip_services_1_1_commons_1_1_run_1_1_i_openable.html">IOpenable</a> interface</li>
 </ul>
 <p>On container stop actions are performed in reversed order:</p><ul>
-<li>Closes components that implement <a href="https://rawgit.com/pip-services-dotnet/pip-services-commons-dotnet/master/doc/api/interface_pip_services_1_1_commons_1_1_run_1_1_i_closable.html">IClosable</a> interface</li>
-<li>Unsets references in components that implement <a href="https://rawgit.com/pip-services-dotnet/pip-services-commons-dotnet/master/doc/api/interface_pip_services_1_1_commons_1_1_refer_1_1_i_unreferenceable.html">IUnreferenceable</a> interface</li>
+<li>Closes components that implement <a href="https://rawgit.com/pip-services3-dotnet/pip-services3-commons-dotnet/master/doc/api/interface_pip_services_1_1_commons_1_1_run_1_1_i_closable.html">IClosable</a> interface</li>
+<li>Unsets references in components that implement <a href="https://rawgit.com/pip-services3-dotnet/pip-services3-commons-dotnet/master/doc/api/interface_pip_services_1_1_commons_1_1_refer_1_1_i_unreferenceable.html">IUnreferenceable</a> interface</li>
 <li>Destroys components in the container.</li>
 </ul>
 <p>The component configuration can be parameterized by dynamic values.That allows specialized containers to inject parameters from command line or from environment variables.</p>
-<p>The container automatically creates a <a href="https://rawgit.com/pip-services-dotnet/pip-services-components-dotnet/master/doc/api/class_pip_services_1_1_components_1_1_info_1_1_context_info.html">ContextInfo</a> component that carries detail information about the container and makes it available for other components.</p>
+<p>The container automatically creates a <a href="https://rawgit.com/pip-services3-dotnet/pip-services3-components-dotnet/master/doc/api/class_pip_services_1_1_components_1_1_info_1_1_context_info.html">ContextInfo</a> component that carries detail information about the container and makes it available for other components.</p>
 <h3>Configuration parameters</h3>
 <ul>
 <li>name: the context (container or process) name</li>
@@ -174,7 +174,7 @@ ContextInfo&#160;</td><td class="memItemRight" valign="bottom"><b>_info</b></td>
 <li>properties: entire section of additional descriptive properties</li>
 <li>... </li>
 </ul>
-<div class="fragment"><div class="line">======= config.yml ========</div><div class="line">- descriptor: mygroup:mycomponent1:<span class="keywordflow">default</span>:<span class="keywordflow">default</span>:1.0</div><div class="line">param1: 123</div><div class="line">param2: ABC</div><div class="line"></div><div class="line">- type: mycomponent2,mypackage</div><div class="line">param1: 321</div><div class="line">&lt;h1&gt;param2: XYZ</div><div class="line">&lt;/h1&gt;</div><div class="line"></div><div class="line">var container = <span class="keyword">new</span> <a class="code" href="class_pip_services_1_1_container_1_1_container.html#aacc5e785ba73b5bb9428f21b22683eea">Container</a>();</div><div class="line">container.AddFactory(<span class="keyword">new</span> MyComponentFactory());</div><div class="line"></div><div class="line">var parameters = ConfigParams.fromValue(process.env);</div><div class="line">container.ReadConfigFromFile(<span class="stringliteral">&quot;123&quot;</span>, <span class="stringliteral">&quot;./config/config.yml&quot;</span>, parameters);</div><div class="line"></div><div class="line">container.Open(<span class="stringliteral">&quot;123&quot;</span>);</div><div class="line">Console.Out.WriteLine(<span class="stringliteral">&quot;Container is opened&quot;</span>);</div><div class="line">...</div><div class="line">container.Close(<span class="stringliteral">&quot;123&quot;</span>);</div><div class="line">Console.Out.WriteLine(<span class="stringliteral">&quot;Container is closed&quot;</span>);</div></div><!-- fragment --> <p>See <a href="https://rawgit.com/pip-services-dotnet/pip-services-commons-dotnet/master/doc/api/interface_pip_services_1_1_commons_1_1_config_1_1_i_configurable.html">IConfigurable</a>, <a href="https://rawgit.com/pip-services-dotnet/pip-services-commons-dotnet/master/doc/api/interface_pip_services_1_1_commons_1_1_refer_1_1_i_referenceable.html">IReferenceable</a>, <a href="https://rawgit.com/pip-services-dotnet/pip-services-commons-dotnet/master/doc/api/interface_pip_services_1_1_commons_1_1_run_1_1_i_openable.html">IOpenable</a> </p>
+<div class="fragment"><div class="line">======= config.yml ========</div><div class="line">- descriptor: mygroup:mycomponent1:<span class="keywordflow">default</span>:<span class="keywordflow">default</span>:1.0</div><div class="line">param1: 123</div><div class="line">param2: ABC</div><div class="line"></div><div class="line">- type: mycomponent2,mypackage</div><div class="line">param1: 321</div><div class="line">&lt;h1&gt;param2: XYZ</div><div class="line">&lt;/h1&gt;</div><div class="line"></div><div class="line">var container = <span class="keyword">new</span> <a class="code" href="class_pip_services_1_1_container_1_1_container.html#aacc5e785ba73b5bb9428f21b22683eea">Container</a>();</div><div class="line">container.AddFactory(<span class="keyword">new</span> MyComponentFactory());</div><div class="line"></div><div class="line">var parameters = ConfigParams.fromValue(process.env);</div><div class="line">container.ReadConfigFromFile(<span class="stringliteral">&quot;123&quot;</span>, <span class="stringliteral">&quot;./config/config.yml&quot;</span>, parameters);</div><div class="line"></div><div class="line">container.Open(<span class="stringliteral">&quot;123&quot;</span>);</div><div class="line">Console.Out.WriteLine(<span class="stringliteral">&quot;Container is opened&quot;</span>);</div><div class="line">...</div><div class="line">container.Close(<span class="stringliteral">&quot;123&quot;</span>);</div><div class="line">Console.Out.WriteLine(<span class="stringliteral">&quot;Container is closed&quot;</span>);</div></div><!-- fragment --> <p>See <a href="https://rawgit.com/pip-services3-dotnet/pip-services3-commons-dotnet/master/doc/api/interface_pip_services_1_1_commons_1_1_config_1_1_i_configurable.html">IConfigurable</a>, <a href="https://rawgit.com/pip-services3-dotnet/pip-services3-commons-dotnet/master/doc/api/interface_pip_services_1_1_commons_1_1_refer_1_1_i_referenceable.html">IReferenceable</a>, <a href="https://rawgit.com/pip-services3-dotnet/pip-services3-commons-dotnet/master/doc/api/interface_pip_services_1_1_commons_1_1_run_1_1_i_openable.html">IOpenable</a> </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="aacc5e785ba73b5bb9428f21b22683eea"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aacc5e785ba73b5bb9428f21b22683eea">&#9670;&nbsp;</a></span>Container()</h2>
@@ -183,7 +183,7 @@ ContextInfo&#160;</td><td class="memItemRight" valign="bottom"><b>_info</b></td>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">PipServices.Container.Container.Container </td>
+          <td class="memname">PipServices3.Container.Container.Container </td>
           <td>(</td>
           <td class="paramtype">string&#160;</td>
           <td class="paramname"><em>name</em> = <code>null</code>, </td>
@@ -221,7 +221,7 @@ ContextInfo&#160;</td><td class="memItemRight" valign="bottom"><b>_info</b></td>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void PipServices.Container.Container.AddFactory </td>
+          <td class="memname">void PipServices3.Container.Container.AddFactory </td>
           <td>(</td>
           <td class="paramtype">IFactory&#160;</td>
           <td class="paramname"><em>factory</em></td><td>)</td>
@@ -247,7 +247,7 @@ ContextInfo&#160;</td><td class="memItemRight" valign="bottom"><b>_info</b></td>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">async Task PipServices.Container.Container.CloseAsync </td>
+          <td class="memname">async Task PipServices3.Container.Container.CloseAsync </td>
           <td>(</td>
           <td class="paramtype">string&#160;</td>
           <td class="paramname"><em>correlationId</em></td><td>)</td>
@@ -277,7 +277,7 @@ ContextInfo&#160;</td><td class="memItemRight" valign="bottom"><b>_info</b></td>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void PipServices.Container.Container.Configure </td>
+          <td class="memname">virtual void PipServices3.Container.Container.Configure </td>
           <td>(</td>
           <td class="paramtype">ConfigParams&#160;</td>
           <td class="paramname"><em>config</em></td><td>)</td>
@@ -311,7 +311,7 @@ ContextInfo&#160;</td><td class="memItemRight" valign="bottom"><b>_info</b></td>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual bool PipServices.Container.Container.IsOpen </td>
+          <td class="memname">virtual bool PipServices3.Container.Container.IsOpen </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -336,7 +336,7 @@ ContextInfo&#160;</td><td class="memItemRight" valign="bottom"><b>_info</b></td>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">async Task PipServices.Container.Container.OpenAsync </td>
+          <td class="memname">async Task PipServices3.Container.Container.OpenAsync </td>
           <td>(</td>
           <td class="paramtype">string&#160;</td>
           <td class="paramname"><em>correlationId</em></td><td>)</td>
@@ -363,7 +363,7 @@ ContextInfo&#160;</td><td class="memItemRight" valign="bottom"><b>_info</b></td>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void PipServices.Container.Container.ReadConfigFromFile </td>
+          <td class="memname">void PipServices3.Container.Container.ReadConfigFromFile </td>
           <td>(</td>
           <td class="paramtype">string&#160;</td>
           <td class="paramname"><em>correlationId</em>, </td>
@@ -410,7 +410,7 @@ ContextInfo&#160;</td><td class="memItemRight" valign="bottom"><b>_info</b></td>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void PipServices.Container.Container.SetReferences </td>
+          <td class="memname">virtual void PipServices3.Container.Container.SetReferences </td>
           <td>(</td>
           <td class="paramtype">IReferences&#160;</td>
           <td class="paramname"><em>references</em></td><td>)</td>
@@ -444,7 +444,7 @@ ContextInfo&#160;</td><td class="memItemRight" valign="bottom"><b>_info</b></td>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void PipServices.Container.Container.UnsetReferences </td>
+          <td class="memname">virtual void PipServices3.Container.Container.UnsetReferences </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>

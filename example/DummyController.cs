@@ -1,10 +1,10 @@
 ﻿using System.Threading.Tasks;
-using PipServices.Commons.Config;
-using PipServices.Commons.Refer;
-using PipServices.Commons.Run;
-using PipServices.Components.Log;
+using PipServices3.Commons.Config;
+using PipServices3.Commons.Refer;
+using PipServices3.Commons.Run;
+using PipServices3.Components.Log;
 
-namespace PipServices.Container
+namespace PipServices3.Container
 {
     public sealed class DummyController : IReferenceable, IReconfigurable, IOpenable, INotifiable
     {

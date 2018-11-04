@@ -1,8 +1,8 @@
 ﻿using System.Threading;
 using System.Threading.Tasks;
-using PipServices.Commons.Refer;
+using PipServices3.Commons.Refer;
 
-namespace PipServices.Container
+namespace PipServices3.Container
 {
     public class DummyProcess : ProcessContainer
     {

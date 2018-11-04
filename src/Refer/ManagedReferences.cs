@@ -1,8 +1,8 @@
-﻿using PipServices.Commons.Refer;
-using PipServices.Commons.Run;
+﻿using PipServices3.Commons.Refer;
+using PipServices3.Commons.Run;
 using System.Threading.Tasks;
 
-namespace PipServices.Container.Refer
+namespace PipServices3.Container.Refer
 {
     /// <summary>
     /// Managed references that in addition to keeping and locating references can also
@@ -14,7 +14,7 @@ namespace PipServices.Container.Refer
     /// </summary>
     /// See <see cref="RunReferencesDecorator"/>, <see cref="LinkReferencesDecorator"/>, 
     /// <see cref="BuildReferencesDecorator"/>, 
-    /// <a href="https://rawgit.com/pip-services-dotnet/pip-services-commons-dotnet/master/doc/api/class_pip_services_1_1_commons_1_1_refer_1_1_references.html">References</a>
+    /// <a href="https://rawgit.com/pip-services3-dotnet/pip-services3-commons-dotnet/master/doc/api/class_pip_services_1_1_commons_1_1_refer_1_1_references.html">References</a>
     public class ManagedReferences: ReferencesDecorator, IOpenable
     {
         protected References _references;

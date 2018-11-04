@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using PipServices.Commons.Refer;
-using PipServices.Components.Build;
+using PipServices3.Commons.Refer;
+using PipServices3.Components.Build;
 
-namespace PipServices.Container.Refer
+namespace PipServices3.Container.Refer
 {
     /// <summary>
     /// References decorator that automatically creates missing components using

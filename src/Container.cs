@@ -1,17 +1,17 @@
 ﻿using System;
 using System.Threading.Tasks;
-using PipServices.Commons.Config;
-using PipServices.Commons.Errors;
-using PipServices.Commons.Refer;
-using PipServices.Commons.Run;
-using PipServices.Components.Build;
-using PipServices.Components.Info;
-using PipServices.Components.Log;
-using PipServices.Container.Build;
-using PipServices.Container.Config;
-using PipServices.Container.Refer;
+using PipServices3.Commons.Config;
+using PipServices3.Commons.Errors;
+using PipServices3.Commons.Refer;
+using PipServices3.Commons.Run;
+using PipServices3.Components.Build;
+using PipServices3.Components.Info;
+using PipServices3.Components.Log;
+using PipServices3.Container.Build;
+using PipServices3.Container.Config;
+using PipServices3.Container.Refer;
 
-namespace PipServices.Container
+namespace PipServices3.Container
 {
     /// <summary>
     /// Inversion of control (IoC) container that creates components and manages their lifecycle.
@@ -22,19 +22,19 @@ namespace PipServices.Container
     /// 
     /// On container start it performs the following actions:
     /// - Creates components using their types or calls registered factories to create components using their locators
-    /// - Configures components that implement <a href="https://rawgit.com/pip-services-dotnet/pip-services-commons-dotnet/master/doc/api/interface_pip_services_1_1_commons_1_1_config_1_1_i_configurable.html">IConfigurable</a> interface and passes them their configuration parameters
-    /// - Sets references to components that implement <a href="https://rawgit.com/pip-services-dotnet/pip-services-commons-dotnet/master/doc/api/interface_pip_services_1_1_commons_1_1_refer_1_1_i_referenceable.html">IReferenceable</a> interface and passes them references of all components in the container
-    /// - Opens components that implement <a href="https://rawgit.com/pip-services-dotnet/pip-services-commons-dotnet/master/doc/api/interface_pip_services_1_1_commons_1_1_run_1_1_i_openable.html">IOpenable</a> interface
+    /// - Configures components that implement <a href="https://rawgit.com/pip-services3-dotnet/pip-services3-commons-dotnet/master/doc/api/interface_pip_services_1_1_commons_1_1_config_1_1_i_configurable.html">IConfigurable</a> interface and passes them their configuration parameters
+    /// - Sets references to components that implement <a href="https://rawgit.com/pip-services3-dotnet/pip-services3-commons-dotnet/master/doc/api/interface_pip_services_1_1_commons_1_1_refer_1_1_i_referenceable.html">IReferenceable</a> interface and passes them references of all components in the container
+    /// - Opens components that implement <a href="https://rawgit.com/pip-services3-dotnet/pip-services3-commons-dotnet/master/doc/api/interface_pip_services_1_1_commons_1_1_run_1_1_i_openable.html">IOpenable</a> interface
     /// 
     /// On container stop actions are performed in reversed order:
-    /// - Closes components that implement <a href="https://rawgit.com/pip-services-dotnet/pip-services-commons-dotnet/master/doc/api/interface_pip_services_1_1_commons_1_1_run_1_1_i_closable.html">IClosable</a> interface
-    /// - Unsets references in components that implement <a href="https://rawgit.com/pip-services-dotnet/pip-services-commons-dotnet/master/doc/api/interface_pip_services_1_1_commons_1_1_refer_1_1_i_unreferenceable.html">IUnreferenceable</a> interface
+    /// - Closes components that implement <a href="https://rawgit.com/pip-services3-dotnet/pip-services3-commons-dotnet/master/doc/api/interface_pip_services_1_1_commons_1_1_run_1_1_i_closable.html">IClosable</a> interface
+    /// - Unsets references in components that implement <a href="https://rawgit.com/pip-services3-dotnet/pip-services3-commons-dotnet/master/doc/api/interface_pip_services_1_1_commons_1_1_refer_1_1_i_unreferenceable.html">IUnreferenceable</a> interface
     /// - Destroys components in the container.
     /// 
     /// The component configuration can be parameterized by dynamic values.That allows specialized containers
     /// to inject parameters from command line or from environment variables.
     /// 
-    /// The container automatically creates a <a href="https://rawgit.com/pip-services-dotnet/pip-services-components-dotnet/master/doc/api/class_pip_services_1_1_components_1_1_info_1_1_context_info.html">ContextInfo</a> component that carries detail information
+    /// The container automatically creates a <a href="https://rawgit.com/pip-services3-dotnet/pip-services3-components-dotnet/master/doc/api/class_pip_services_1_1_components_1_1_info_1_1_context_info.html">ContextInfo</a> component that carries detail information
     /// about the container and makes it available for other components.
     /// 
     /// ### Configuration parameters ###
@@ -69,9 +69,9 @@ namespace PipServices.Container
     /// Console.Out.WriteLine("Container is closed");
     /// </code>
     /// </example>
-    /// See <a href="https://rawgit.com/pip-services-dotnet/pip-services-commons-dotnet/master/doc/api/interface_pip_services_1_1_commons_1_1_config_1_1_i_configurable.html">IConfigurable</a>, 
-    /// <a href="https://rawgit.com/pip-services-dotnet/pip-services-commons-dotnet/master/doc/api/interface_pip_services_1_1_commons_1_1_refer_1_1_i_referenceable.html">IReferenceable</a>, 
-    /// <a href="https://rawgit.com/pip-services-dotnet/pip-services-commons-dotnet/master/doc/api/interface_pip_services_1_1_commons_1_1_run_1_1_i_openable.html">IOpenable</a>
+    /// See <a href="https://rawgit.com/pip-services3-dotnet/pip-services3-commons-dotnet/master/doc/api/interface_pip_services_1_1_commons_1_1_config_1_1_i_configurable.html">IConfigurable</a>, 
+    /// <a href="https://rawgit.com/pip-services3-dotnet/pip-services3-commons-dotnet/master/doc/api/interface_pip_services_1_1_commons_1_1_refer_1_1_i_referenceable.html">IReferenceable</a>, 
+    /// <a href="https://rawgit.com/pip-services3-dotnet/pip-services3-commons-dotnet/master/doc/api/interface_pip_services_1_1_commons_1_1_run_1_1_i_openable.html">IOpenable</a>
     public class Container: IConfigurable, IReferenceable, IUnreferenceable, IOpenable
     {
         protected ILogger _logger = new NullLogger();

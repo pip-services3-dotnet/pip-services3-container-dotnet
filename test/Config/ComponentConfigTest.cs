@@ -1,10 +1,10 @@
-﻿using PipServices.Commons.Config;
-using PipServices.Commons.Errors;
-using PipServices.Commons.Refer;
+﻿using PipServices3.Commons.Config;
+using PipServices3.Commons.Errors;
+using PipServices3.Commons.Refer;
 using Xunit;
-using TypeDescriptor = PipServices.Commons.Reflect.TypeDescriptor;
+using TypeDescriptor = PipServices3.Commons.Reflect.TypeDescriptor;
 
-namespace PipServices.Container.Config
+namespace PipServices3.Container.Config
 {
     public sealed class ComponentConfigTest
     {

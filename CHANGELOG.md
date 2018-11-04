@@ -3,7 +3,7 @@
 ## <a name="2.2.0"></a> 2.2.0 (2018-03-26)
 
 ### Features
-* ContainerInfo was replaced with ContextInfo from PipServices.Commons
+* ContainerInfo was replaced with ContextInfo from PipServices3.Commons
 
 ## <a name="2.1.0"></a> 2.1.0 (2017-10-24)
 
@@ -14,7 +14,7 @@
 ## <a name="2.0.0-2.0.2"></a> 2.0.0-2.0.2 (2017-06-12)
 
 ### Features
-* Moved **ManagedReferences** from **pip-services-commons**
+* Moved **ManagedReferences** from **pip-services3-commons**
 
 ### Breaking Changes
 * Removed **IDescriptable** interface

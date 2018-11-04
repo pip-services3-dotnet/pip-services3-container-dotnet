@@ -1,11 +1,11 @@
 ﻿using System;
-using PipServices.Commons.Config;
-using PipServices.Commons.Refer;
-using PipServices.Commons.Reflect;
-using PipServices.Components.Build;
-using PipServices.Container.Config;
+using PipServices3.Commons.Config;
+using PipServices3.Commons.Refer;
+using PipServices3.Commons.Reflect;
+using PipServices3.Components.Build;
+using PipServices3.Container.Config;
 
-namespace PipServices.Container.Refer
+namespace PipServices3.Container.Refer
 {
     /// <summary>
     /// Container managed references that can be created from container configuration.

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['buildreferencesdecorator',['BuildReferencesDecorator',['../class_pip_services_1_1_container_1_1_refer_1_1_build_references_decorator.html',1,'PipServices::Container::Refer']]]
+  ['buildreferencesdecorator',['BuildReferencesDecorator',['../class_pip_services_1_1_container_1_1_refer_1_1_build_references_decorator.html',1,'PipServices3::Container::Refer']]]
 ];

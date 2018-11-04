@@ -1,9 +1,9 @@
-﻿using PipServices.Commons.Config;
-using PipServices.Commons.Errors;
-using PipServices.Commons.Refer;
-using PipServices.Commons.Reflect;
+﻿using PipServices3.Commons.Config;
+using PipServices3.Commons.Errors;
+using PipServices3.Commons.Refer;
+using PipServices3.Commons.Reflect;
 
-namespace PipServices.Container.Config
+namespace PipServices3.Container.Config
 {
     /// <summary>
     /// Configuration of a component inside a container.

@@ -1,6 +1,6 @@
-# <img src="https://github.com/pip-services/pip-services/raw/master/design/Logo.png" alt="Pip.Services Logo" style="max-width:30%"> <br/> IoC container for .NET
+# <img src="https://github.com/pip-services3/pip-services3/raw/master/design/Logo.png" alt="Pip.Services Logo" style="max-width:30%"> <br/> IoC container for .NET
 
-This framework is a part of [Pip.Services](https://github.com/pip-services/pip-services) project.
+This framework is a part of [Pip.Services](https://github.com/pip-services3/pip-services3) project.
 It provides inversion-of-control component container to facilitate development of composable services and applications.
 
 As all Pip.Services projects this framework implemented in variety of different languages: Java, .NET, Python, Node.js, Golang. 
@@ -15,10 +15,10 @@ Default container factory provides generic functionality on demand such as loggi
 
 Quick Links:
 
-* [Downloads](https://github.com/pip-services-dotnet/pip-services-container-dotnet/blob/master/doc/Downloads.md)
-* [API Reference](https://rawgit.com/pip-services-dotnet/pip-services-container-dotnet/master/doc/api/index.html)
-* [Building and Testing](https://github.com/pip-services-dotnet/pip-services-container-dotnet/blob/master/doc/Development.md)
-* [Contributing](https://github.com/pip-services-dotnet/pip-services-container-dotnet/blob/master/doc/Development.md/#contrib)
+* [Downloads](https://github.com/pip-services3-dotnet/pip-services3-container-dotnet/blob/master/doc/Downloads.md)
+* [API Reference](https://rawgit.com/pip-services3-dotnet/pip-services3-container-dotnet/master/doc/api/index.html)
+* [Building and Testing](https://github.com/pip-services3-dotnet/pip-services3-container-dotnet/blob/master/doc/Development.md)
+* [Contributing](https://github.com/pip-services3-dotnet/pip-services3-container-dotnet/blob/master/doc/Development.md/#contrib)
 
 ## Acknowledgements
 

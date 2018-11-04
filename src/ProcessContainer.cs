@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Threading;
 using System.Threading.Tasks;
-using PipServices.Components.Log;
-using PipServices.Commons.Config;
+using PipServices3.Components.Log;
+using PipServices3.Commons.Config;
 
-namespace PipServices.Container
+namespace PipServices3.Container
 {
     /// <summary>
     /// Inversion of control (IoC) container that runs as a system process.
@@ -103,7 +103,7 @@ namespace PipServices.Container
 
         private void PrintHelp()
         {
-            Console.Out.WriteLine("Pip.Services process container - http://www.github.com/pip-services/pip-services");
+            Console.Out.WriteLine("Pip.Services process container - http://www.github.com/pip-services3/pip-services3");
             Console.Out.WriteLine("run [-h] [-c <config file>] [-p <param>=<value>]*");
         }
 

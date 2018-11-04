@@ -1,9 +1,9 @@
 ﻿using System.IO;
-using PipServices.Commons.Config;
-using PipServices.Commons.Errors;
-using PipServices.Components.Config;
+using PipServices3.Commons.Config;
+using PipServices3.Commons.Errors;
+using PipServices3.Components.Config;
 
-namespace PipServices.Container.Config
+namespace PipServices3.Container.Config
 {
     /// <summary>
     /// Helper class that reads container configuration from JSON or YAML file.

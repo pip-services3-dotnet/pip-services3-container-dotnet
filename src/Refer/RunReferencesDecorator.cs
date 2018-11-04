@@ -1,14 +1,14 @@
-﻿using PipServices.Commons.Refer;
-using PipServices.Commons.Run;
+﻿using PipServices3.Commons.Refer;
+using PipServices3.Commons.Run;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace PipServices.Container.Refer
+namespace PipServices3.Container.Refer
 {
     /// <summary>
     /// References decorator that automatically opens to newly added components
-    /// that implement <a href="https://rawgit.com/pip-services-dotnet/pip-services-commons-dotnet/master/doc/api/interface_pip_services_1_1_commons_1_1_run_1_1_i_openable.html">IOpenable</a> interface and closes removed components
-    /// that implement <a href="https://rawgit.com/pip-services-dotnet/pip-services-commons-dotnet/master/doc/api/interface_pip_services_1_1_commons_1_1_run_1_1_i_closable.html">IClosable</a> interface.
+    /// that implement <a href="https://rawgit.com/pip-services3-dotnet/pip-services3-commons-dotnet/master/doc/api/interface_pip_services_1_1_commons_1_1_run_1_1_i_openable.html">IOpenable</a> interface and closes removed components
+    /// that implement <a href="https://rawgit.com/pip-services3-dotnet/pip-services3-commons-dotnet/master/doc/api/interface_pip_services_1_1_commons_1_1_run_1_1_i_closable.html">IClosable</a> interface.
     /// </summary>
     public class RunReferencesDecorator : ReferencesDecorator, IOpenable
     {

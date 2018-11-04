@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using PipServices.Commons.Config;
+using PipServices3.Commons.Config;
 
-namespace PipServices.Container.Config
+namespace PipServices3.Container.Config
 {
     /// <summary>
     /// Container configuration defined as a list of component configurations.

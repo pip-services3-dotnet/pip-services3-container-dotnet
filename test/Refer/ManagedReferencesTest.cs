@@ -1,8 +1,8 @@
-﻿using PipServices.Components.Log;
-using PipServices.Commons.Refer;
+﻿using PipServices3.Components.Log;
+using PipServices3.Commons.Refer;
 using Xunit;
 
-namespace PipServices.Container.Refer
+namespace PipServices3.Container.Refer
 {
     public class ManagedReferencesTest
     {
