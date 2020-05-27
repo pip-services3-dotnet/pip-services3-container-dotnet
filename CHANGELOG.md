@@ -1,5 +1,10 @@
 # IoC container for Pip.Services in .NET Changelog
 
+## <a name="3.1.0"></a> 3.1.0 (2020-05-26)
+
+### Breaking Changes
+* Migrated to .NET Core 3.1
+
 ## <a name="2.2.0"></a> 2.2.0 (2018-03-26)
 
 ### Features
