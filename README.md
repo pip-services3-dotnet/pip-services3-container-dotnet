@@ -1,12 +1,14 @@
 # <img src="https://github.com/pip-services/pip-services/raw/master/design/Logo.png" alt="Pip.Services Logo" style="max-width:30%"> <br/> IoC container for .NET
 
-This module is a part of the [Pip.Services](http://pipservices.org) polyglot microservices toolkit.
-It provides inversion-of-control component container to facilitate development of composable services and applications.
+This module is a part of the [Pip.Services](http://pipservices.org) polyglot microservices toolkit. It provides an inversion-of-control (IoC) container to facilitate the development of services and applications composed of loosely coupled components.
 
-As all Pip.Services projects this framework implemented in variety of different languages: Java, .NET, Python, Node.js, Golang. 
+The module containes a basic in-memory container that can be embedded inside a service or application, or can be run by itself.
+The second container type can run as a system level process and can be configured via command line arguments.
+Also it can be used to create docker containers.
 
-The framework provides light-weight container that can be embedded inside service or application, or can be run by itself, as a system process, for example. Container configuration service as recipe to instantiate and configure components inside the container.  
-Default container factory provides generic functionality on demand such as logging and performance monitoring.
+The containers can read configuration from JSON or YAML files use it as a recipe for instantiating and configuring components.
+Component factories are used to create components based on their locators (descriptor) defined in the container configuration.
+The factories shall be registered in containers or dynamically in the container configuration file.
 
 The module contains the following packages:
 - **Core** - Component container and container as a system process
