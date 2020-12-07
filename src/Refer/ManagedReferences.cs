@@ -14,7 +14,7 @@ namespace PipServices3.Container.Refer
     /// </summary>
     /// See <see cref="RunReferencesDecorator"/>, <see cref="LinkReferencesDecorator"/>, 
     /// <see cref="BuildReferencesDecorator"/>, 
-    /// <a href="https://rawgit.com/pip-services3-dotnet/pip-services3-commons-dotnet/master/doc/api/class_pip_services_1_1_commons_1_1_refer_1_1_references.html">References</a>
+    /// <a href="https://pip-services3-dotnet.github.io/pip-services3-commons-dotnet/class_pip_services3_1_1_commons_1_1_refer_1_1_references.html">References</a>
     public class ManagedReferences: ReferencesDecorator, IOpenable
     {
         protected References _references;

@@ -5,7 +5,7 @@ using System.Collections.Generic;
 namespace PipServices3.Container.Refer
 {
     /// <summary>
-    /// Chainable decorator for <a href="https://rawgit.com/pip-services3-dotnet/pip-services3-commons-dotnet/master/doc/api/interface_pip_services_1_1_commons_1_1_refer_1_1_i_references.html">IReferences</a> that allows to inject additional capabilities
+    /// Chainable decorator for <a href="https://pip-services3-dotnet.github.io/pip-services3-commons-dotnet/interface_pip_services3_1_1_commons_1_1_refer_1_1_i_references.html">IReferences</a> that allows to inject additional capabilities
     /// such as automatic component creation, automatic registration and opening.
     /// </summary>
     /// See <see cref="IReferences"/>
