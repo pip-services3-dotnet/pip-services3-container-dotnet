@@ -7,6 +7,7 @@ using PipServices3.Components.Connect;
 using PipServices3.Components.Count;
 using PipServices3.Components.Info;
 using PipServices3.Components.Log;
+using PipServices3.Components.Trace;
 
 namespace PipServices3.Container.Build
 {
@@ -35,6 +36,7 @@ namespace PipServices3.Container.Build
             Add(new DefaultInfoFactory());
             Add(new DefaultLoggerFactory());
             Add(new DefaultCountersFactory());
+            Add(new DefaultTracerFactory());
             Add(new DefaultConfigReaderFactory());
             Add(new DefaultCacheFactory());
             Add(new DefaultCredentialStoreFactory());
